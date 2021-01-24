@@ -18,7 +18,7 @@ game.py
 ```
 
 ## Demo :
-
+[Ping-Pong.gif](https://github.com/dromenjager/ping-pong-game/blob/main/ping-pong.mp4)
 
 ## Instructions to play :
 > q - Left paddle up
