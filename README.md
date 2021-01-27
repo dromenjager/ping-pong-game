@@ -12,9 +12,9 @@ cd ~ && git clone https://github.com/dromenjager/ping-pong-game
 cd ping-pong-game
 ```
 
-3. Start the game:
+## Start the game:
 ```
-game.py
+python3 game.py
 ```
 
 ## Demo :

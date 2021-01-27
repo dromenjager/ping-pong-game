@@ -6,10 +6,8 @@ from score import Scoreboard
 import time
 import random
 
-
 # Set the starting position for paddles-[left, right]
 starting_pos = [(-360.0, 0.0), (360.0, 0.0)]
-
 # Setup Screen:
 screen = Screen()
 # set the screen background
@@ -42,10 +40,13 @@ screen.onkey(left_paddle.move_down, "a")
 screen.onkey(right_paddle.move_up, "Up")
 screen.onkey(right_paddle.move_down, "Down")
 
-screen.textinput("Start Game", "q - Left handle move up\na -\
+screen.textinput(
+    "Start Game",
+    "q - Left handle move up\na -\
  Left handle move down\nUp arrow - Right handle move up\n\
 Down arrow - Right handle move down\n\n\
-Press Enter to start the game.")
+Press Enter to start the game.",
+)
 
 # let keypress register some action
 screen.listen()
@@ -72,13 +73,11 @@ while game_on:
 
     # when ball collides with any paddles:
     # collision with right paddle:
-    if ball.distance(right_paddle) < 60 and ball.xcor() > 330\
-            and ball.xcor() < 350:
+    if ball.distance(right_paddle) < 60 and ball.xcor() > 330 and ball.xcor() < 350:
         ball.bounce_x()
         score.increment_score()
     # collision with left paddle:
-    if ball.distance(left_paddle) < 60 and ball.xcor() < -330\
-            and ball.xcor() > -360:
+    if ball.distance(left_paddle) < 60 and ball.xcor() < -330 and ball.xcor() > -360:
         ball.bounce_x()
         score.increment_score()
 

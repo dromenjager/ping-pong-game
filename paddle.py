@@ -31,6 +31,10 @@ class Paddle(Turtle):
         self.goto(self.xcor(), y_corr-20)
 
     def limit_vertical_movement(self):
+        """
+        Stop the paddle from
+        getting out of screen
+        """
         if self.ycor() > 270:
             self.goto((self.xcor(), 270))
         elif self.ycor() < -270:
